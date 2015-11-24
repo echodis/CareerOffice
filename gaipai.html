@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	    body{ 
+	  	    background:#d9edf7;
+	    } 
+	    
+	    .p2,
+		.p3,
+		.p4,
+		.p5,
+		.p6{
+			display: none;
+		}
+		
+	    #nav{
+			width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+			
+		}
+		#show{
+			/*border: 2px solid grey;*/
+			width: 100%;
+			height: 300px;
+			margin-top: 20px;
+			margin-bottom: 30px;
+
+		}
+		#gp{
+			background:white;
+			border:2px solid #eee;
+			width:60%;
+			height: 80%;
+			text-align: center;
+			float: left;
+			margin:30px;
+			margin-top: 20px;
+			padding:30px;
+		}
+		#note{
+			background:white;
+			border:2px solid #eee;
+			width:30%;
+			height: 80%;
+			text-align: center;
+		
+			margin:10px;
+			margin-top: 20px;
+
+		}
+		#div_restart{
+			margin:30px;
+        }
+
+		
+
+	</style>
+
+</head>
+<body>
+	<div id="nav">
+		<button type="button" class="bt btn btn-lg btn-info" >办理改派</button>
+	    <button type="button" class="bt btn btn-lg btn-info">办理xxx</button>
+	    <button type="button" class="bt btn btn-lg btn-info">办理xxx</button>
+	    <button type="button" class="bt btn btn-lg btn-info">办理xxx</button>
+	</div>
+	
+	<div id="show" >
+		<div id="gp" class="col-md-6">
+		  <p class="p1">
+		    <span>原报到证名头是否为单位</span>
+		    <label  for="yes">是<input class="yes" name="p1" type="radio" data-p="p2"></label>
+		    <label  for="no">否<input class="no" name="p1" type="radio" data-p="p3"></label>
+	      </p>
+	      <p class="p2">
+		    <span>新报道证明头是否为单位</span>
+		    <label for="yes">是<input class="yes" name="p2" type="radio" data-p="p4"></label>
+		    <label for="no">否<input class="no" name="p2" type="radio" data-p="n" data-p1-p2-n="1 原报到证 2 原单位解约函"></label>
+	      </p>
+	      <p class="p3">
+		    <span>档案是否在学校</span>
+		    <label for="yes">是<input class="yes" name="p3" type="radio" data-p="p4"></label>
+		    <label for="no">否<input class="no" name="p3" type="radio" data-p="p5"></label>
+	      </p>
+	      <p class="p4">
+		    <span>签约单位是否北上广杭津</span>
+		    <label for="yes">是<input class="yes" name="p4" type="radio" data-p="y"
+			data-p1-p2-p4-y="<p>1 原报到证</p><p>2 原单位解约函</p><p>3 新三方协议（白联)</p><p>4 落户通知</p>"
+			data-p1-p3-p4-y="<p>1 原报到证</p><p>2 新三方协议（白联）</p><p>3 档案改派证明 </p><p>4 落户通知</p>"
+			data-p1-p3-p5-p6-p4-y="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案改派证明</p> <p>4落户通知</p>"
+			data-p1-p3-p5-p4-y="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3落户通知</p>"></label>
+		    <label for="no">否<input class="no" name="p4" type="radio" data-p="n"
+		    data-p1-p2-n="<p>1.原报到证</p><p>2.原单位解约函</p>"
+			data-p1-p2-p4-n="<p>1 原报到证 </p><p>2 原单位解约函 </p><p>3 新三方协议（白联）</p>"
+			data-p1-p3-p4-n="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案在校证明</p>"
+			data-p1-p3-p5-p6-p4-n="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案改派证明</p>"
+			data-p1-p3-p5-p4-n="<p>1 原报到证</p> <p>2 新三方协议（白联）</p>"></label>
+	      
+	      <p class="p5">
+		    <span>是否辽宁省内生源</span>
+		    <label for="yes">是<input class="yes" name="p5" type="radio" data-p="p6"></label>
+		    <label for="no">否<input class="no" name="p5" type="radio" data-p="p4"></label>
+	      </p>
+	
+	      <p class="p6">
+		    <span>去原籍开同意改派证明</span>
+		    <label for="yes">是<input type="radio" name="p6" class="yes" data-p="p4"></label>
+	      </p>
+		</div>
+		<div id="note" class="col-md-4">
+			<h2>所需材料</h2>
+			<div id="showResults"></div>
+			<p id="note" style="display:none;">请持以上材料到招生就业处办理</p>
+		</div>
+	</div>
+	
+
+	<div id="div_restart">
+		<button class="restart btn btn-primary">重置</button>
+	</div>
+
+	
+    <footer class="footer">
+       <p>© Company...</p>
+    </footer>
+
+	<script src="./js/jquery-1.11.3.min.js"></script>
+	<script>
+		//var arr = [$('.p1')];  //用来保存每次点击的选项
+		var arr = ['p1'];
+		var allP = $('p');
+		var startP = $('.p1');
+		var allInput = $('input');
+		var resultDiv = $('#showResults');
+		$('.yes').on('click', handleClick);
+		$('.no').on('click', handleClick);
+
+		$('.restart').on('click', function(){
+			arr = arr.slice(0,1);
+			allP.hide();
+			resultDiv.hide();
+			startP.show();
+			allInput.attr('checked',false);
+		})
+
+		function handleClick() {
+			var _this = $(this),
+				p = '';
+			if (_this.data('p') === 'y' || _this.data('p') === 'n') {
+				arr.push(_this.data('p'));
+				var index = arr.join("-");
+				// console.log(index);
+				$('#showResults').html(_this.data(index)).show(); //没有下一个了，此时输出结果
+			} else {
+				p = $('.' + _this.data('p'));  //查找下一个应该显示的
+				arr.push(_this.data('p'));
+				p.show();
+			}
+			_this.parent().parent().hide();
+		}
+	</script>
+</body>
+</html>

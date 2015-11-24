@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.p2,
+		.p3,
+		.p4,
+		.p5 {
+			display: none;
+		}
+		#div_btn{
+			width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+		}
+		#div_show{
+			border: 2px solid grey;
+			width: 100%;
+			height: 300px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		#div_gp{
+			border:2px solid grey;
+			width:60%;
+			height: 80%;
+			text-align: center;
+			float: left;
+			margin:10px;
+			margin-top: 20px;
+			
+		}
+		#div_note{
+			border:2px solid grey;
+			width: 35%;
+			height: 80%;
+			float: left;
+			margin: 10px;			
+			margin-top: 20px;
+		}
+		#div_reset{
+			/*border: 1px solid yellow;*/
+			/*float: left;*/
+			margin-left: 10%;
+			
+		}
+		#div_reset input{
+			margin-right: 30%;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="div_btn">
+		<input type="button" value="办理改派" id="gp" class="btn">
+		<input type="button" value="办理XX">
+		<input type="button" value="办理XX">
+		<input type="button" value="办理XX">
+	</div>
+	<div id="div_show">
+		<div id="div_gp">
+			<p class="p1">
+				<span>原报到证名头是否为单位</span>
+				<label for="yes">是<input class="yes" name="p1" type="radio" data-p="p2"></label>
+				<label for="no">否<input class="no" name="p1" type="radio" data-p="p3"></label>
+			</p>
+			<p class="p2">
+				<span>新报到证明头是否为单位</span>
+				<label for="yes">是<input class="yes" name="p2" type="radio" data-p="p4"></label>
+				<label for="no">否<input class="no" name="p2" type="radio" data-p="result"></label>
+			</p>
+			<p class="p3">
+				<span>档案是否在学校</span>
+				<label for="yes">是<input class="yes" name="p3" type="radio" data-p="p4"></label>
+				<label for="no">否<input class="no" name="p3" type="radio" data-p="p5"></label>
+			</p>
+			<p class="p4">
+				<span>签约单位是否北上广深杭津</span>
+				<label for="yes">是<input class="yes" name="p4" type="radio" data-p="result"></label>
+				<label for="no">否<input class="no" name="p4" type="radio" data-p="result"></label>
+			</p>
+			<p class="p5">
+				<span>是否辽宁省内生源</span>
+				<label for="yes">是<input class="yes" name="p5" type="radio" data-p="result"></label>
+				<label for="no">否<input class="no" name="p5" type="radio" data-p="p4"></label>
+			</p>
+		</div>
+		<div id="div_note">
+			<p>所需材料</p>
+			<p id="note" style="display:none;">请持以上材料到招生就业处办理</p>
+		</div>
+	</div>
+	
+	<div id="div_reset">
+		<input type="button" value="上一个">
+		<input type="button" value="重置">
+	</div>
+	<script src="./js/jquery-1.11.3.min.js"></script>
+	<script>
+		var arr = [$('.p1')];  //用来保存每次点击的选项
+		$('.yes').on('click', handleClick);
+		$('.no').on('click', handleClick);
+		function handleClick() {
+			var _this = $(this),
+			p = '';
+			if (_this.data('p') === 'result') {
+				var arr_con=_this.attr('class'); //保存所有选项记录
+				$.each(arr,function(i,val){
+					arr_con+=val.attr('class');		
+				});
+				if(arr_con==='nop1p2'){
+					$('#note').html('<p>1.原报到证</p><p>2.原单位解约函</p>'+$('#note').html());
+				}else if(arr_con==='nop1p2p4'){
+					$('#note').html('<p>1.原报到证</p><p>2.原单位解约函</p><p>3.新三方协议（白联）</p>'+$('#note').html());
+				}else if(arr_con==='yesp1p2p4'){
+					$('#note').html('<p>1.原报到证</p><p>2.原单位解约函</p><p>3.新三方协议（白联）</p><p>4.落户通知</p>'+$('#note').html());
+				}else if(arr_con==='nop1p3p4'){
+					$('#note').html('<p>1.原报到证</p><p>2.新三方协议（白联）</p><p>3.档案在校证明</p>'+$('#note').html());
+				}else if(arr_con==='yesp1p3p4'){
+					$('#note').html('<p>1.原报到证</p><p>2.新三方协议（白联）</p><p>3.档案改派证明</p><p>4.落户通知</p>'+$('#note').html());
+				}else if(arr_con==='yesp1p3p5'){
+					$('#note').html('<p>1.原报到证</p><p>2.新三方协议（白联）</p><p>3.档案改派证明</p><p>4.落户通知</p>'+$('#note').html());
+				}else if(arr_con==='nop1p3p5'){
+					$('#note').html('<p>1.原报到证</p><p>2.新三方协议（白联）</p><p>3.档案改派证明</p>'+$('#note').html());
+				}else if(arr_con==='yesp1p3p5p4'){
+					$('#note').html('<p>1.原报到证</p><p>2.新三方协议（白联）</p><p>3.落户通知</p>'+$('#note').html());
+				}else{
+					$('#note').html('<p>1.原报到证</p><p>2.新三方协议（白联）</p>'+$('#note').html());
+				}
+				$('#note').css('display','block');
+			} else {
+				p = $('.' + _this.data('p'));  //查找下一个应该显示的
+				arr.push(p);
+				p.show();
+			}
+			_this.parent().parent().hide();
+		}
+		$('#gp').on('click',function(){
+			arr = arr.slice(0,1);
+			$('#p1').show();
+			$('#div_note').show();
+			$('#div_gp').show();
+			$('input[type=radio]').attr('checked',false);
+		});
+		
+	</script>
+</body>
+</html>
