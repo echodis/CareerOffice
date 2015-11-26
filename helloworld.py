@@ -3,5 +3,5 @@ while True:
     if s=='quit':
       break
     print 'Length of the string is', len(s)
-print 'have done'
+print 'have done say hellow world'
 
