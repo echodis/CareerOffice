@@ -57,7 +57,14 @@
 		#div_restart{
 			margin:30px;
         }
-
+		#div_printpage{
+			width:700px;
+			height: 500px;
+			border:1px solid black;
+			position:absolute;
+			top:250px;
+			left: 350px;
+		}
 		
 
 	</style>
@@ -123,8 +130,13 @@
 
 	<div id="div_restart">
 		<button class="restart btn btn-primary">重置</button>
+		<button class="print btn btn-primary">打印</button>
 	</div>
-
+	<!-- 添加打印功能浮层（未使用）
+	<div id="div_printpage" style="display:none">
+		我是要打印的页面
+		xxxxx.doc
+	</div> -->
 	
     <footer class="footer">
        <p>© Company...</p>
@@ -164,6 +176,13 @@
 			}
 			_this.parent().parent().hide();
 		}
+		$('.print').on('click',function(){
+				// $('#div_printpage').show();
+				location.href="改派_单位到单位.PDF";
+		});
+		
+
+
 	</script>
 </body>
 </html>
