@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人信息</title>
+	<script src="js/jquery-2.0.2.js"></script>
+	<script src="js/student_info.js"></script>
+	<style>
+		#wrapper{
+			border:1px solid blue;
+			width: 50%;
+			height: 100%;
+			margin: 10% auto;
+			border-radius: 10%;
+			text-align: center;
+			padding-top: 2%;
+		}
+		#wrapper lable,select,input{
+			margin: 2%;
+		}
+		#wrapper p{
+			font-size: 20px;
+		}
+		#content{
+			/*text-align: left;*/
+			/*margin-left: 25%;*/
+			margin-left: auto;
+			margin-right:auto;
+		}
+		input,select{
+			width: 30%;
+		}
+		input[type="submit"]{
+			width: 40%;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<p>为确保打印成功，请准确输入个人信息！</p>
+	 	<div id="content">
+		 	<label for="">毕业年度：</label>
+		 	<select name="" id="year">
+		 		<option value="2017">2017</option>
+				<option value="2016">2016</option>
+		 	</select><br>
+		 	<!-- //时间这块怎么解决，自动还是手动填写 -->
+		 	<!-- <span id="span1">年度：</span><br> -->
+		 	<label for="" >姓名：</label>
+			<input type="text" value="请输入姓名" id="name"><br>
+			<label for="" >学历：</label>
+			<select name="" id="academic">
+				<option value="本科">本科</option>
+				<option value="硕士">硕士</option>
+			</select><br>
+			<label for="">专业：</label>
+			<select name="" id="major">
+				<option value="管经">管经</option>
+				<option value="电信">电信</option>
+			</select><br>
+			<label for="">原派遣公司：</label>
+			<input type="text" value="请输入原派遣公司全称" id="oldCompany"><br>
+			<label for="">新派遣公司：</label>
+			<input type="text" value="请输入新派遣公司全称" id="newCompany"><br>
+			<input type="submit" value="提交">
+		</div> 
+	</div>
+
+</body>
+</html>
