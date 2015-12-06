@@ -7,25 +7,23 @@ $(function(){
 	function  decode(item){
 		return decodeURIComponent(item);
 	}
-	var year=GetQueryString("year");
-	var name=GetQueryString("name");
-	var academic=GetQueryString("academic");
-	var major=GetQueryString("major");
-	var oldCompany=GetQueryString("oldCompany");
-	var newCompany=GetQueryString("newCompany");
+	var year=GetQueryString("year"),
+		name=GetQueryString("name"),
+		academic=GetQueryString("academic"),
+		major=GetQueryString("major"),
+		oldCompany=GetQueryString("oldCompany"),
+		newCompany=GetQueryString("newCompany");
 	$('.year').text(decode(year));
 	$('.name').text(decode(name));
 	$('.academic').text(decode(academic));
 	$('.major').text(decode(major));
 	$('.oldCompany').text(decode(oldCompany));
 	$('.newCompany').text(decode(newCompany));
-	//日期
+	//获取日期
 	var date=new Date();
 	$('#sign span').text(date.getFullYear()+"年"+(date.getMonth()+1)+"月"+(date.getDate()+1)+"日");
-	
+	//打印功能
 	$('#printBtn').on('click',function(){
 		window.print();
 	});
-
-	
 });
