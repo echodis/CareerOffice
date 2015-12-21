@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大连理工大学就业办公室</title>
+	<style>
+		#gp .p2,.p3,.p4,.p5,.p6{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="button" value="办理签约" id="qianyue">
+		<input type="button" value="办理违约"id="weiyue">
+		<input type="button" value="办理改派" id="gaipai"> 
+		<input type="button" value="办理派遣"id="paiqian">
+		<input type="button" value="其他功能" id="else">
+	</div>
+	<div id="show_div">
+		<div id="qianyue_div" style="display:none;">
+			<p>办理签约！</p>
+			<p>1.企业是否在大工就业网上发送offer？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>2.学生是否已经网上接收offer？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>3.学生是否已经打印三方协议书？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>4.学生是否本科？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>4.学生是否将协议书寄回给企业？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+		</div>
+		<div id="weiyue_div" style="display:none;">
+			<p>办理违约！</p>
+			<p>1.学生是否持有企业解约函？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>2.学生是否持有违约申请书（本科生需由院系盖章）？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>3.学生是否持有原单位三方协议（四份）</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<!-- 不是硕士 -->
+			<p>$.新公司是否发送offer？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>$.其他</p>
+		</div>
+		<div id="gaipai_div" style="display:none;">
+			<p>办理改派！</p>
+			<p>改派方式</p>			
+			<div id="gp" class="col-md-6">
+			  <p class="p1">
+			    <span>1)原报到证名头是否为单位</span>
+			    <label  for="yes">是<input class="yes" name="p1" type="radio" data-p="p2"></label>
+			    <label  for="no">否<input class="no" name="p1" type="radio" data-p="p3"></label>
+		      </p>
+		      <p class="p2">
+			    <span>2)新报道证明头是否为单位</span>
+			    <label for="yes">是<input class="yes" name="p2" type="radio" data-p="p4"></label>
+			    <label for="no">否<input class="no" name="p2" type="radio" data-p="n" data-p1-p2-n="1 原报到证 2 原单位解约函"></label>
+		      </p>
+		      <p class="p3">
+			    <span>3)档案是否在学校</span>
+			    <label for="yes">是<input class="yes" name="p3" type="radio" data-p="p4"></label>
+			    <label for="no">否<input class="no" name="p3" type="radio" data-p="p5"></label>
+		      </p>
+		      <p class="p4">
+			    <span>4)签约单位是否北上广杭津</span>
+			    <label for="yes">是<input class="yes" name="p4" type="radio" data-p="y"
+				data-p1-p2-p4-y="<p>1 原报到证</p><p>2 原单位解约函</p><p>3 新三方协议（白联)</p><p>4 落户通知</p><a href=''>打印单位到单位</a>"
+				data-p1-p3-p4-y="<p>1 原报到证</p><p>2 新三方协议（白联）</p><p>3 档案改派证明 </p><p>4 落户通知</p><a href=''>打印？</a>"
+				data-p1-p3-p5-p6-p4-y="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案改派证明</p> <p>4落户通知</p><a href=''>打印？</a>"
+				data-p1-p3-p5-p4-y="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3落户通知</p><a href=''>打印？</a>"></label>
+			    <label for="no">否<input class="no" name="p4" type="radio" data-p="n"
+			    data-p1-p2-n="<p>1.原报到证</p><p>2.原单位解约函<a href=''>打印？</a></p>"
+				data-p1-p2-p4-n="<p>1 原报到证 </p><p>2 原单位解约函 </p><p>3 新三方协议（白联）<a href=''>打印？</a></p>"
+				data-p1-p3-p4-n="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案在校证明</p><a href=''>打印？</a>"
+				data-p1-p3-p5-p6-p4-n="<p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案改派证明</p><a href=''>打印？</a>"
+				data-p1-p3-p5-p4-n="<p>1 原报到证</p> <p>2 新三方协议（白联）</p><a href=''>打印？</a>"></label>		      
+		      <p class="p5">
+			    <span>5)是否辽宁省内生源</span>
+			    <label for="yes">是<input class="yes" name="p5" type="radio" data-p="p6"></label>
+			    <label for="no">否<input class="no" name="p5" type="radio" data-p="p4"></label>
+		      </p>		
+		      <p class="p6">
+			    <span>6)去原籍开同意改派证明</span>
+			    <label for="yes">是<input type="radio" name="p6" class="yes" data-p="p4"></label>
+		      </p>
+		      <div id="div_restart">
+					<button class="restart btn btn-primary">重置</button>
+			  </div>
+		  	</div>
+			<div id="showResults">
+				<p id="note" style="display:none;">请持以上材料到招生就业处办理</p>
+			</div>
+			
+		</div>
+		<div id="paiqian_div" style="display:none;">
+			<p>办理派遣！</p>
+			<p>1.是否下月拿毕业证？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>2.后台系统中是否有学生生源？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+			<p>3.学生是否找到录取当年名册？</p>
+			<label  for="yes">是<input type="radio" value="是">
+			<label  for="no">否<input type="radio" value="否">
+		</div>
+		<div id="else_div" style="display:none;">
+			<p>办理其他业务！</p>
+		</div>
+	</div>
+	<script src="js/jquery-2.0.2.js"></script>
+	<script >
+			//切换窗口函数	
+			var shownDiv;
+			function shown(){
+				$(shownDiv).hide();
+				shownDiv='#'+this.id+'_div';
+				$(shownDiv).show();	
+			}
+			//切换窗口
+			$('#qianyue').click(shown);
+			$('#weiyue').click(shown);
+			$('#gaipai').click(shown);
+			$('#paiqian').click(shown);
+			$('#else').click(shown);
+
+			//改派功能
+			var arr = ['p1'];
+			var allP = $('#gp p');
+			var startP = $('.p1');
+			var allInput = $('input');
+			// var resultDiv = ;
+			$('.yes').on('click', handleClick);
+			$('.no').on('click', handleClick);
+
+			$('.restart').on('click', function(){
+				arr = arr.slice(0,1);
+				allP.hide();
+				$('#showResults').hide();
+				$('#tip').show();
+				startP.show();
+				allInput.attr('checked',false);
+			})
+
+			function handleClick() {
+				var _this = $(this),
+					p = '';
+				if (_this.data('p') === 'y' || _this.data('p') === 'n') {
+					arr.push(_this.data('p'));
+					var index = arr.join("-");
+					// console.log(index);
+					$('#showResults').html(_this.data(index)).show(); //没有下一个了，此时输出结果
+				} else {
+					p = $('.' + _this.data('p'));  //查找下一个应该显示的
+					arr.push(_this.data('p'));
+					p.show();
+				}
+				_this.parent().parent().hide();
+			}
+			$('.print').on('click',function(){
+					// $('#div_printpage').show();
+					url="student_info.html"
+					location.href=url;
+			});
+	</script>
+</body>
+</html>
