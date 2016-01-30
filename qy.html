@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大连理工大学就业办公室</title>
+	<link rel="stylesheet" type="text/css" href="css/careerOffice.css">
+</head>
+<body>
+	<div id="nav_div">
+		<a href="qy.html"><input type="button" value="办理签约" id="qyBtn"></a>
+		<a href="wy.html"><input type="button" value="办理违约"id="wyBtn"></a>
+		<a href="gp.html"><input type="button" value="办理改派" id="gpBtn"></a>
+		<a href="pq.html"><input type="button" value="办理派遣"id="pqBtn"></a>
+		<a href="all.html"><input type="button" value="其他功能" id="else"></a>
+	</div>
+	<div id="show_div">
+		<div id="qianyue_div">
+			<p>办理签约！</p>
+			<p class="choice" id="qy_p1" >1.用人单位是否已经通过大工就业网发送offer？</p>
+			<label  for="yes">是<input type="radio" value="是" name="qianyue1" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="qianyue1" class="no">
+			<p class="choice" id="qy_p2">2.是否进行网上签约？</p>
+			<label  for="yes">是<input type="radio" value="是" name="qianyue2" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="qianyue2" class="no">
+			<p class="choice" id="qy_p3">3.学生是否已经通过大工就业网接收offer？</p>
+			<label  for="yes">是<input type="radio" value="是" name="qianyue3" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="qianyue3" class="no">
+			<p class="choice" id="qy_p4">4.是否已经打印三方协议书？</p>
+			<label  for="yes">是<input type="radio" value="是" name="qianyue4" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="qianyue4" class="no">
+			<p class="choice" id="qy_p5">5.学生是否已经通过大工就业网申请空白协议书？</p>
+			<label  for="yes">是<input type="radio" value="是" name="qianyue5" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="qianyue5" class="no">
+			<p class="choice" id="qy_p6">6.是否已经打印空白协议书？</p>
+			<label  for="yes">是<input type="radio" value="是" name="qianyue6" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="qianyue6" class="no">
+		</div>
+	</div>
+	<div id="show_div">
+		<div id="reg" title="会员注册" >
+			<p>您还未完成该操作！</p>
+			<p>请选择是否观看教程</p>
+			<a ><input type="button" value="我要看教程" id="yesVideo_btn"></a>
+			<input type="button" value="不了，我知道如何操作" id="noVideo_btn">	
+		</div>
+		<div  class="mask" style="display:none;"></div>
+	</div>
+	<script src="js/jquery-2.0.2.js"></script>
+	<script type="text/javascript" src="js/careerOffice.js"></script>
+	<script type="text/javascript" src="js/qy.js"></script>
+</body>
+</html>

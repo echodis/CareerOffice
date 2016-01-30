@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大连理工大学就业办公室</title>
+	<link rel="stylesheet" type="text/css" href="css/careerOffice.css">
+</head>
+<body>
+	<div id="nav_div">
+		<a href="qy.html"><input type="button" value="办理签约" id=""></a>
+		<a href="wy.html"><input type="button" value="办理违约"id="weiyue"></a>
+		<a href="gp.html"><input type="button" value="办理改派" id="gaipai"></a>
+		<a href="pq.html"><input type="button" value="办理派遣"id="paiqian"></a>
+		<a href="all.html"><input type="button" value="其他功能" id="else"></a>
+	</div>
+	<div id="show_div">
+		<div id="weiyue_div">
+			<p>办理违约！</p>
+			<p id="wy_p1">1.学生是否持有用人单位解约函？</p>
+			<label  for="yes">是<input type="radio" value="是" name="wy1" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="wy1" class="no">
+			<p id="wy_p2">2.学生是否持有原单位三方协议</p>
+			<label  for="yes">是<input type="radio" value="是" name="wy2" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="wy2" class="no">
+			<p id="wy_p3">3.学生是否持有违约申请表？</p>
+			<label  for="yes">是<input type="radio" value="是" name="wy3" class="yes">
+			<label  for="no">否<input type="radio" value="否" name="wy3" class="no">			
+		</div>
+		<div id="show_div">
+			<div id="reg" title="会员注册" >
+				<p>您还未完成该操作！</p>
+				<p>请选择是否观看教程</p>
+				<a ><input type="button" value="我要看教程" id="yesVideo_btn"></a>
+				<input type="button" value="不了，我知道如何操作" id="noVideo_btn">	
+			</div>
+			<div  class="mask" style="display:none;"></div>
+		</div>
+	</div>
+	<script src="js/jquery-2.0.2.js"></script>
+	<script type="text/javascript" src="js/careerOffice.js"></script>
+	<script type="text/javascript" src="js/wy.js"></script>
+</body>
+</html>

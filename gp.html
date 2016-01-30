@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大连理工大学就业办公室</title>
+	<link rel="stylesheet" type="text/css" href="css/careerOffice.css">
+</head>
+<body>
+	<div id="nav_div">
+		<a href="qy.html"><input type="button" value="办理签约" id="qyBtn"></a>
+		<a href="wy.html"><input type="button" value="办理违约"id="wyBtn"></a>
+		<a href="gp.html"><input type="button" value="办理改派" id="gpBtn"></a>
+		<a href="pq.html"><input type="button" value="办理派遣"id="pqBtn"></a>
+		<a href="all.html"><input type="button" value="其他功能" id="else"></a>
+	</div>
+	<div id="show_div">
+		<div id="gaipai_div">
+			<p>办理改派！</p>
+			<div id="gp" class="col-md-6">
+			  <p class="p1">
+			    <span>·原报到证名头是否为单位</span>
+			    <label  for="yes">是<input class="yes" name="p1" type="radio" data-p="p2"></label>
+			    <label  for="no">否<input class="no" name="p1" type="radio" data-p="p3"></label>
+		      </p>
+		      <p class="p2">
+			    <span>·新报道证明头是否为单位</span>
+			    <label for="yes">是<input class="yes" name="p2" type="radio" data-p="p4"></label>
+			    <label for="no">否<input class="no" name="p2" type="radio" data-p="n" data-p1-p2-n="<p>需准备材料：</p><p>1.原报到证</p><p>2.原单位解约函</p><a href='student_info1.html' class='print'>3.改派证明</a></p>"></label>
+		      </p>
+		      <p class="p3">
+			    <span>·档案是否在学校</span>
+			    <label for="yes">是<input class="yes" name="p3" type="radio" data-p="p4"></label>
+			    <label for="no">否<input class="no" name="p3" type="radio" data-p="p5"></label>
+		      </p>
+		      <p class="p4">
+			    <span>·签约单位是否北上广杭津</span>
+			    <label for="yes">是<input class="yes" name="p4" type="radio" data-p="y"
+				data-p1-p2-p4-y="<p>需准备材料：</p><p>1 原报到证</p><p>2 原单位解约函</p><p>3 新三方协议（白联）</p><p>4 落户通知</p><a href='student_info2.html' class='print'>5.改派证明</a>"
+				data-p1-p3-p4-y="<p>需准备材料：</p><p>1 原报到证</p><p>2 新三方协议（白联）</p><p>3 档案改派证明 </p><p>4 落户通知</p><a href='student_info.html' class='print'>5.改派证明</a>"
+				data-p1-p3-p5-p6-p4-y="<p>需准备材料：</p><p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案改派证明</p> <p>4落户通知</p><a href='student_info.html' class='print'>5.改派证明</a>"
+				data-p1-p3-p5-p4-y="<p>需准备材料：</p><p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3落户通知</p><a href='student_info.html' class='print'>4.改派证明</a>"></label>
+			    <label for="no">否<input class="no" name="p4" type="radio" data-p="n"
+			    data-p1-p2-n="<p>需准备材料：</p><p>1.原报到证</p><p>2.原单位解约函</p><a href='student_info1.html' class='print'>3.改派证明</a></p>"
+				data-p1-p2-p4-n="<p>需准备材料：</p><p>1 原报到证 </p><p>2 原单位解约函 </p><p>3 新三方协议（白联）<a href='student_info2.html' class='print'>4.改派证明</a></p>"
+				data-p1-p3-p4-n="<p>需准备材料：</p><p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案在校证明</p><a href='student_info.html' class='print'>4.改派证明</a>"
+				data-p1-p3-p5-p6-p4-n="<p>需准备材料：</p><p>1 原报到证 </p><p>2 新三方协议（白联）</p><p>3 档案改派证明</p><a href='student_info.html' class='print'>4.改派证明</a>"
+				data-p1-p3-p5-p4-n="<p>需准备材料：</p><p>1 原报到证</p> <p>2 新三方协议（白联）</p><a href='student_info.html' class='print'>3.改派证明</a>"></label>		      
+		      <p class="p5">
+			    <span>·是否辽宁省内生源</span>
+			    <label for="yes">是<input class="yes" name="p5" type="radio" data-p="p6"></label>
+			    <label for="no">否<input class="no" name="p5" type="radio" data-p="p4"></label>
+		      </p>		
+		      <p class="p6">
+			    <span>·去原籍开同意改派证明</span>
+			    <label for="yes">是<input type="radio" name="p6" class="yes" data-p="p4"></label>
+		      </p>
+		      <div id="div_restart">
+					<button class="restart btn btn-primary">重置</button>
+			  </div>
+		  	</div>
+			<div id="showResults">
+				<p id="note" style="display:none;">请持以上材料到招生就业处办理</p>
+			</div>	
+		</div>
+	</div>
+	<script src="js/jquery-2.0.2.js"></script>
+	<script type="text/javascript" src="js/careerOffice.js"></script>
+	<script type="text/javascript" src="js/gp.js"></script>
+</body>
+</html>
