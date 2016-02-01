@@ -4,19 +4,34 @@
 	<meta charset="UTF-8">
 	<title>大连理工大学就业办公室</title>
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
-	<style type="text/css" src="css/careerOffice.css"></style>
+	<link href="css/careerOffice.css" rel="stylesheet" type="text/css" >
+<style>
+	.jumbotron{
+	width:650px;
+	margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;
+			padding: 50px;
+			border-radius: 20px;
+}
+</style>
 </head>
 <body>
 	<div class="row">
 		<div id="ban" class="col-md-12"></div>
   	</div>
 	<div id="nav_div">
-		<a href="qy.html"><input type="button" value="办理签约" id=""></a>
-		<a href="wy.html"><input type="button" value="办理违约"id="weiyue"></a>
-		<a href="pq.html"><input type="button" value="办理派遣"id="paiqian"></a>
-		<a href="gp.html"><input type="button" value="办理改派" id="gaipai"></a>
-		<a href="all.html"><input type="button" value="其他功能" id="else"></a>
+		<a href="qy.html"><input type="button" value="办理签约" id="qianyue" class="btnindex btn btn-primary "></a>
+		<a href="wy.html"><input type="button" value="办理违约"id="weiyue" class="btnindex btn btn-info "></a>
+		<a href="pq.html"><input type="button" value="办理派遣"id="paiqian" class="btnindex btn btn-success "></a>
+		<a href="gp.html"><input type="button" value="办理改派" id="gaipai" class="btnindex btn btn-warning "></a>
+		<a href="all.html"><input type="button" value="其他功能" id="else" class="btnindex btn btn-info "></a>
 	</div>
+	<div class="jumbotron">
+       <h1>欢迎使用本系统!</h1>
+       <p style="margin-top:20px">请在上方选择需要办理的业务.</p>
+       
+    </div>
 	<script src="js/jquery-2.0.2.js"></script>
 	<script type="text/javascript" src="js/careerOffice.js"></script>
 	<script type="text/javascript" src="js/qy.js"></script>
