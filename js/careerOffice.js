@@ -1,13 +1,6 @@
 $(function(){
-<<<<<<< HEAD
 
-	//click yes:出现图片
-	$('.yes').click(function(){
-		$(this).parent().prev().addClass('bg_img');
-	});
-=======
 	var itemNumber;
->>>>>>> upstream/master
 	//click no：弹窗
 	var tip_no=function(){
 	//set mask
