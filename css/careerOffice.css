@@ -4,17 +4,14 @@
 	height: 150px;
 }
 #nav_div{
-			margin-top: 20px;
-			width:800px;
-			margin-left: auto;
-			margin-right: auto;
-		}
+	margin-top: 20px;
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
- .btnindex{
-        	        	width:150px;
-        	        	
-
-        	
+.btnindex{
+        	width:150px;	
         }
 #jumbotron{
 	width: 80%;
@@ -33,14 +30,14 @@
 	height: 300px;
 	display: none;
 	position: absolute;
-	z-index: 99
+	z-index: 99;
 	width: 50%;
 	margin-right: 0;	99;
 	background-color: white;
 	padding: 20px;
 }
 .mask{       
-    background-color: #ccc; 
+   background-color: #ccc; 
    filter:alpha(opacity=50);/*IE*/ 
    opacity:0.5;/*FF*/ 
    z-index:1; 
