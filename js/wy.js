@@ -2,7 +2,7 @@ $(function(){
 	//办理违约
 	//click yes:出现图片
 	$('.yes').click(function(){
-		$(this).parent().prev().addClass('bg_img');
+		$(this).parent().parent().addClass('bg_img');
 		check();
 	});	
 	//判断是否全部选择“是”
@@ -17,7 +17,8 @@ $(function(){
 	        }
 	    }
 	    if(chosenRadio==3){
-	    	alert('操作完成！');
+	    	//$('#success_info').css('display','block');
+	    	//alert('操作完成！');
 	    }
 	}	
 });

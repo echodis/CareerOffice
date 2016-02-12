@@ -5,49 +5,62 @@
 	<title>大连理工大学就业办公室</title>
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/careerOffice.css" rel="stylesheet" type="text/css" >
+	<style>
+	#weiyue_div{
+		width:800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	</style>
 </head>
 <body>
 	<div class="row">
 		<div id="ban" class="col-md-12"></div>
   	</div>
-		<div id="nav_div">
+	<div id="nav_div">
 		<a href="qy.html"><input type="button" value="办理签约" id="qianyue" class="btnindex btn btn-primary "></a>
 		<a href="wy.html"><input type="button" value="办理违约"id="weiyue" class="btnindex btn btn-info "></a>
 		<a href="pq.html"><input type="button" value="办理派遣"id="paiqian" class="btnindex btn btn-success "></a>
 		<a href="gp.html"><input type="button" value="办理改派" id="gaipai" class="btnindex btn btn-warning "></a>
 		<a href="all.html"><input type="button" value="其他功能" id="else" class="btnindex btn btn-info "></a>
-	<div id="show_div">
+	</div>
+	<div class="row">
 		<div id="weiyue_div">
 			<div id="wel" >
 				<h2 class="text-center">欢迎办理违约！</h2>
 			</div>
-			
-
-			<p id="wy_p1">1.学生是否持有用人单位解约函？</p>
-			<label  for="yes">是<input type="radio" value="是" name="wy1" class="yes">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="wy1" class="no">
-			</label>
-			<p id="wy_p2">2.学生是否持有原单位三方协议</p>
-			<label  for="yes">是<input type="radio" value="是" name="wy2" class="yes">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="wy2" class="no">
-			</label>
-			<p id="wy_p3">3.学生是否持有违约申请表？</p>
-			<label  for="yes">是<input type="radio" value="是" name="wy3" class="yes">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="wy3" class="no">
-			</label>		
-		</div>
-		<div id="show_div">
-			<div id="reg" title="会员注册" >
-				<p>您还未完成该操作！</p>
-				<p>请选择是否观看教程</p>
-				<a ><input type="button" value="我要看教程" id="yesVideo_btn"></a>
-				<input type="button" value="不了，我知道如何操作" id="noVideo_btn">	
+			<div id="wy_p1">
+				<p>1.学生是否持有用人单位解约函？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="wy1" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="wy1" class="no">否</label>
 			</div>
-			<div  class="mask" style="display:none;"></div>
+			<div id="wy_p2">
+				<p>2.学生是否持有原单位三方协议</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="wy2" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="wy2" class="no">否</label>
+			</div>
+			<div id="wy_p3">
+				<p>3.学生是否持有违约申请表？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="wy3" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="wy3" class="no">否</label>	
+			</div>		
+			<div id="success_info">请完成以上所有步骤</div>
+		</div>		
+	</div>
+	<div id="show_div">
+		<div id="reg" title="会员注册" >
+			<p>您还未完成该操作！</p>
+			<p>请选择是否观看教程</p>
+			<a ><input type="button" value="我要看教程" id="yesVideo_btn"></a>
+			<input type="button" value="不了，我知道如何操作" id="noVideo_btn">	
 		</div>
+		<div  class="mask" style="display:none;"></div>
 	</div>
 	<script src="js/jquery-2.0.2.js"></script>
 	<script type="text/javascript" src="js/careerOffice.js"></script>

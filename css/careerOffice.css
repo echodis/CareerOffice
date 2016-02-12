@@ -1,9 +1,14 @@
+/*修改字体*/
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6{ 
+	font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
 #ban{
 	margin-top:0px;
 	background:url("../img/ban1280.gif") no-repeat center;
 	height: 150px;
 }
 #nav_div{
+	display: block;
 	margin-top: 20px;
 	width:800px;
 	margin-left: auto;
@@ -32,9 +37,8 @@
 	position: absolute;
 	z-index: 99;
 	width: 50%;
-	margin-right: 0;	99;
 	background-color: white;
-	padding: 20px;
+	padding: 50px;
 }
 .mask{       
    background-color: #ccc; 
@@ -45,5 +49,12 @@
 }
 .bg_img{
 	background: url("../img/yes.png") no-repeat center;
-
+}
+#showResults{
+	padding: 30px;
+}
+#success_info{
+	display: inline-block;
+	margin-top: 30px;
+	/*margin-left: 200px;*/
 }

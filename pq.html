@@ -5,6 +5,13 @@
 	<title>大连理工大学就业办公室</title>
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/careerOffice.css" rel="stylesheet" type="text/css" >
+	<style>
+	#paiqian_div{
+		width:800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	</style>
 </head>
 <body>
 	<div class="row">
@@ -16,64 +23,93 @@
 		<a href="pq.html"><input type="button" value="办理派遣"id="paiqian" class="btnindex btn btn-success "></a>
 		<a href="gp.html"><input type="button" value="办理改派" id="gaipai" class="btnindex btn btn-warning "></a>
 		<a href="all.html"><input type="button" value="其他功能" id="else" class="btnindex btn btn-info "></a>
-
-	<div id="show_div">
-		<div id="weiyue_div">
-			<div id="wel" >
-				<h2 class="text-center">欢迎办理博士生派遣！</h2>
-			</div>
+	</div>
+	<div id="show_div" class="row">
 		<div id="paiqian_div">
-			<p>1.学生是否已取得毕业证？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq1">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq1">
-			</label>
-			<p>2.是否将于下月取得毕业证？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq2">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq2">
-			</label>
-			<p>3.学生毕业后就业、出国还是暂不就业？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq3">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq3">
-			</label>
-			<p>4.学生是否已与用人单位签订三方协议</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq4">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq4">
-			</label>
-			<p>5.学生是否已收到国外大学或工作单位的offer？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq5">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq5">
-			</label>
-			<p>6.大工就业网系统中是否有其生源数据，操作过程请参考视频？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq6">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq6">
-			</label>
-			<p>7.大工就业网系统中是否有其签约数据，操作过程请参考视频？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq7">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq7">
-			</label>
-			<p>8.是否自行派遣？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq8">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq8">
-			</label>
-			<p>9.是否已开具未派遣证明？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq9">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq9">
-			</label>
-			<p>10.省端系统是否有其生源数据，操作过程请参考视频？</p>
-			<label  for="yes">是<input type="radio" value="是" name="pq10">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="pq10">
-            </label>				
+			<div id="wel" >
+				<h2 class="text-center">欢迎办理派遣！</h2>
+			</div>
+			<div id="pq_p1">
+				<p>1.学生是否已取得毕业证？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p1" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p1" class="no">否</label>
+			</div>
+			<div id="pq_p2">
+				<p>2.是否将于下月取得毕业证？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p2" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p2" class="no">否</label>
+			</div>			
+			<div id="pq_p3">
+				<p>3.学生毕业后就业、出国还是暂不就业？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p3" class="yes">是</label>		
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p3" class="no">否</label>
+			</div>			
+			<div id="pq_p4">
+				<p>4.学生是否已与用人单位签订三方协议</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p4" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p4" class="no">否</label>
+			</div>			
+			<div id="pq_p5">
+				<p>5.学生是否已收到国外大学或工作单位的offer？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p5" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p5" class="no">否</label>
+			</div>		
+			<div id="pq_p6">
+				<p>6.大工就业网系统中是否有其生源数据，操作过程请参考视频？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p6" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p6" class="no">否</label>
+			</div>
+			<div id="pq_p7">
+				<p>7.大工就业网系统中是否有其签约数据，操作过程请参考视频？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p7" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p7" class="no">否</label>
+			</div>
+			<div id="pq_p8">
+				<p>8.是否自行派遣？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p8" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p8" class="no">否</label>
+			</div>
+			<div id="pq_p9">
+				<p>9.是否已开具未派遣证明？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p9" class="yes">是</label>		
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p9" class="no">否</label>
+			</div>
+			<div id="pq_p10">
+				<p>10.省端系统是否有其生源数据，操作过程请参考视频？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="pq_p10" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="pq_p10" class="no">否</label>
+			</div>			
+			<div id="success_info">请完成以上所有步骤</div>						
+		</div>	
+	</div>
+	<div id="show_div">
+		<div id="reg" title="会员注册" >
+			<p>您还未完成该操作！</p>
+			<p>请选择是否观看教程</p>
+			<a ><input type="button" value="我要看教程" id="yesVideo_btn"></a>
+			<input type="button" value="不了，我知道如何操作" id="noVideo_btn">	
 		</div>
+		<div  class="mask" style="display:none;"></div>
 	</div>
 	<script src="js/jquery-2.0.2.js"></script>
 	<script type="text/javascript" src="js/careerOffice.js"></script>
