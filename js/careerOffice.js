@@ -31,4 +31,8 @@ $(function(){
 		url="video/"+itemNumber+".mp4";
 		location.href=url;
 	});
+	//返回主页
+	$('#ban').click(function(){
+		window.location.href="all.html"; 
+	});
 });

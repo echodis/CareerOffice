@@ -5,17 +5,30 @@
 	<title>大连理工大学就业办公室</title>
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/careerOffice.css" rel="stylesheet" type="text/css" >
+	<style>
+	#weiyue_div{
+		width:800px;
+			margin-left: auto;
+			margin-right: auto;
+	}
+
+	</style>
 </head>
 <body>
 	<div class="row">
 		<div id="ban" class="col-md-12"></div>
   	</div>
-		<div id="nav_div">
-		<a href="qy.html"><input type="button" value="办理签约" id="qianyue" class="btnindex btn btn-primary "></a>
-		<a href="wy.html"><input type="button" value="办理违约"id="weiyue" class="btnindex btn btn-info "></a>
-		<a href="pq.html"><input type="button" value="办理派遣"id="paiqian" class="btnindex btn btn-success "></a>
-		<a href="gp.html"><input type="button" value="办理改派" id="gaipai" class="btnindex btn btn-warning "></a>
-		<a href="all.html"><input type="button" value="其他功能" id="else" class="btnindex btn btn-info "></a>
+	<div id="nav_div">
+		<ul class="nav nav-pills nav-justified">
+            <li role="presentation"><a href="all.html">首页</a></li>
+            <li role="presentation"><a href="qy.html">办理签约</a></li>
+            <li role="presentation" class="active"><a href="wy.html">办理违约</a></li>
+            <li role="presentation"><a href="pq.html">办理派遣</a></li>
+            <li role="presentation"><a href="gp.html">办理改派</a></li>
+            <li role="presentation"><a href="#">办理其他业务</a></li>
+        </ul>
+        <hr>
+	</div>
 	<div id="show_div">
 		<div id="weiyue_div">
 			<div id="wel" >
