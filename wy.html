@@ -8,11 +8,11 @@
 	<style>
 	#weiyue_div{
 		width:800px;
-			margin-left: auto;
-			margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
-
 	</style>
+
 </head>
 <body>
 	<div class="row">
@@ -29,38 +29,47 @@
         </ul>
         <hr>
 	</div>
+
 	<div id="show_div">
+	<div class="row">
 		<div id="weiyue_div">
 			<div id="wel" >
 				<h2 class="text-center">欢迎办理违约！</h2>
 			</div>
-			
-
-			<p id="wy_p1">1.学生是否持有用人单位解约函？</p>
-			<label  for="yes">是<input type="radio" value="是" name="wy1" class="yes">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="wy1" class="no">
-			</label>
-			<p id="wy_p2">2.学生是否持有原单位三方协议</p>
-			<label  for="yes">是<input type="radio" value="是" name="wy2" class="yes">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="wy2" class="no">
-			</label>
-			<p id="wy_p3">3.学生是否持有违约申请表？</p>
-			<label  for="yes">是<input type="radio" value="是" name="wy3" class="yes">
-			</label>
-			<label  for="no">否<input type="radio" value="否" name="wy3" class="no">
-			</label>		
-		</div>
-		<div id="show_div">
-			<div id="reg" title="会员注册" >
-				<p>您还未完成该操作！</p>
-				<p>请选择是否观看教程</p>
-				<a ><input type="button" value="我要看教程" id="yesVideo_btn"></a>
-				<input type="button" value="不了，我知道如何操作" id="noVideo_btn">	
+			<div id="wy_p1">
+				<p>1.学生是否持有用人单位解约函？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="wy1" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="wy1" class="no">否</label>
 			</div>
-			<div  class="mask" style="display:none;"></div>
+			<div id="wy_p2">
+				<p>2.学生是否持有原单位三方协议</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="wy2" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="wy2" class="no">否</label>
+			</div>
+			<div id="wy_p3">
+				<p>3.学生是否持有违约申请表？</p>
+				<label  for="yes" class="radio-inline">
+				<input type="radio" value="是" name="wy3" class="yes">是</label>
+				<label  for="no" class="radio-inline">
+				<input type="radio" value="否" name="wy3" class="no">否</label>	
+			</div>		
+			<div id="success_info">请完成以上所有步骤</div>
+		</div>		
+	</div>
+	</div>
+
+	<div id="show_div">
+		<div id="reg" title="会员注册" >
+			<p>您还未完成该操作！</p>
+			<p>请选择是否观看教程</p>
+			<a ><input type="button" value="我要看教程" id="yesVideo_btn"></a>
+			<input type="button" value="不了，我知道如何操作" id="noVideo_btn">	
 		</div>
+		<div  class="mask" style="display:none;"></div>
 	</div>
 	<script src="js/jquery-2.0.2.js"></script>
 	<script type="text/javascript" src="js/careerOffice.js"></script>

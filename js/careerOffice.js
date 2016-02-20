@@ -1,5 +1,4 @@
 $(function(){
-
 	var itemNumber;
 	//click no：弹窗
 	var tip_no=function(){
@@ -12,14 +11,17 @@ $(function(){
 		//show tip information
 		var obj=$('#reg');
 		var x=($(window).width()-500)/2;
-		var y=($(window).height()-300)/2;	
+		var y=($(window).height()-200)/2;	
 		obj.animate({ opacity: "show", left: x, top:y}, 300);		
 	}
 	$('.no').on('click',function(){
-		$(this).parent().parent().siblings().eq(1).removeClass('bg_img');
+		$(this).parent().parent().removeClass('bg_img');
 		//记录当前题号以提供对应视频
-		itemNumber = $(this).parent().parent().siblings().eq(1).attr('id');
-		tip_no();						
+		//console.log($(this).parent().parent().attr('id'));
+		itemNumber = $(this).parent().parent().attr('id').slice(4);
+		//console.log(itemNumber);
+		tip_no();
+		//alert(itemNumber);						
 	});
 	//不看视频
 	$('#noVideo_btn').on('click',function(){
