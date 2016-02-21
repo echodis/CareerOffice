@@ -17,9 +17,9 @@ $(function(){
 	$('.no').on('click',function(){
 		$(this).parent().parent().removeClass('bg_img');
 		//记录当前题号以提供对应视频
-		//console.log($(this).parent().parent().attr('id'));
+		console.log($(this).parent().parent().attr('id'));
 		itemNumber = $(this).parent().parent().attr('id').slice(4);
-		//console.log(itemNumber);
+		console.log(itemNumber);
 		tip_no();
 		//alert(itemNumber);						
 	});
