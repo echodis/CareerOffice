@@ -8,8 +8,8 @@
 	<style>
 	#qianyue_div{
 		width:800px;
-		margin-left: auto;
-		margin-right: auto;
+			margin-left: auto;
+			margin-right: auto;
 	}
 	</style>
 </head>
@@ -17,41 +17,35 @@
 	<div class="row">
 		<div id="ban" class="col-md-12"></div>
   	</div>
-	<div id="nav_div">
+		<div id="nav_div">
 		<ul class="nav nav-pills nav-justified">
-            <li role="presentation"><a href="all.html">首页</a></li>
             <li role="presentation" class="active"><a href="qy.html">办理签约</a></li>
             <li role="presentation"><a href="wy.html">办理违约</a></li>
-            <li role="presentation"><a href="pq.html">办理派遣</a></li>
-            <li role="presentation"><a href="gp.html">办理改派</a></li>
+            <li role="presentation"><a href="#">办理派遣</a></li>
+            <li role="presentation"><a href="#">办理改派</a></li>
             <li role="presentation"><a href="#">办理其他业务</a></li>
         </ul>
         <hr>
 	</div>
-
-	<div class="row">
+	<div id="show_div" class="row">
 		<div id="qianyue_div">
 			<div id="wel" >
-				<h2 class="text-center">欢迎办理签约！</h2>
+				<h2 class="text-center">欢迎办理非网上签约！</h2>
 			</div>
 			
-	    <div id="qy_choice" class="row">
-		<div id="online" class="col-md-6">
-		    <a href="qy_online.html"><button id="online_btn" class="btn btn-success">网上签约</button></a>
-		    <div id="mes">
-		        <h4 class="text-left">点此选择网上签约</h4>
-		        <h4 class="text-left"><small>在大工就业网平台上进行签约<br>推荐此签约方式</small></h4>
-		    </div>
-		    
-	    </div>
-	    <div id="notonline" class="col-md-6">
-		    <a href="qy_notonline.html"><button id="notonline_btn" class="btn btn-warning">非网上签约</button></a>
-		    <div id="mes">
-		        <h4 class="text-left">点此选择非网上签约</h4>
-		        <h4 class="text-left"><small>通过打印空白三方协议签约进行签约</small></h4>
-		    </div>
-	    </div>				
 
+			<p class="choice" id="qy_notonline_p1">1.学生是否已经通过大工就业网申请空白协议书？</p>
+			<label  for="yes" class="radio-inline"><input type="radio" value="是" name="qianyue5" class="yes">是
+			</label>
+			<label  for="no" class="radio-inline"><input type="radio" value="否" name="qianyue5" class="no">否
+			</label>
+			<br><br>
+			<p class="choice" id=id="qy_notonline_p2">2.是否已经打印空白协议书？</p>
+			<label  for="yes" class="radio-inline"><input type="radio" value="是" name="qianyue6" class="yes">是
+			</label>
+			<label  for="no" class="radio-inline"><input type="radio" value="否" name="qianyue6" class="no">否
+			</label>
+		</div>
 	</div>
 	<div id="show_div">
 		<div id="reg" title="会员注册" >
