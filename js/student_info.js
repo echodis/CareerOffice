@@ -1,11 +1,14 @@
 $(function(){
 	//动态设置毕业时间
+	/*
 	var date=new Date();
-	var dateOptionsHtml='<option value='+(date.getFullYear()+1)+'>'+(date.getFullYear()+1)+'</option>'+
+	var dateOptionsHtml='<option value = '+date.getFullYear()-1+'>'+(date.getFullYear()-1)+'</option>'+
+					'<option value='+(date.getFullYear()+1)+'>'+(date.getFullYear()+1)+'</option>'+
 					'<option value='+(date.getFullYear()+2)+'>'+(date.getFullYear()+2)+'</option>';
-	$('#year').html(dateOptionsHtml);	
+	$('#year').html(dateOptionsHtml);
+	*/	
 	//获取院系动态获取专业	
-	//选项改变时
+	/*选项改变时
 	$('#department').change(function(){
 		//获取选中项
 		var stuDepartment=$('#department').val(),
@@ -26,33 +29,43 @@ $(function(){
 			}
 		}
 		$('#major').html(majorOptions);
-	});
+	});*/
 	
+	//$('.red').css('border','1px solid red');
+
 	//输入框获得焦点自动清空
-	$('#name,#oldCompany,#newCompany').on('focus',function(){
-		$(this).val(null);
+	$('input[type=text]').on('focus',function(){
+		$(this).removeClass('red').val(null);
+		$('#btn').attr('disabled',false);
 	});
-	//提交表单有效性检验（验证是否全部输入）
-	$('#name,#oldCompany,#newCompany').on('focus',function(){
-		$('input[type=submit]').attr('disabled',false);
-	});
-	function validCheck(){
-		if($('#year option:selected').text()!=""&&$('#name').val()!=""&&$('#academic option:selected').text()!=""&&$('#major option:selected').text()!=""&&
-			$('#oldCompany').val()!=""&&$('#newCompany').val()!=""){
-			return true;
-		}else{	
-			alert("输入出错！请检查后重新提交");
-			return false;
+
+	var inputs = new Array();
+	var inputId = new Array();
+	var validCheck = function() {
+		//console.log($('#content input[type=text]'));
+		inputs = $('#content input[type=text]');
+		for (var i=0; i < inputs.length; i++){
+			inputId[i] = inputs[i].id;
+			//console.log(inputId[i]); 
 		}
+		$.each(inputId, function (index,value) {
+			if ($('#'+value).val() == '') {
+				//alert('请完整输入：'+value);
+				$('#'+value).addClass('red');
+				$('#btn').attr('disabled',true);
+				//console.log('prop'+$('#btn').prop('disabled'));
+			};
+		});
 	}
-	//点击提交传参，跳转页面
-	$('input[type=submit]').on('click',function(){
-		if(validCheck()){
-			url='gaipai_text.html?year='+$('#year option:selected').text()+'&name='+$('#name').val()+'&academic='+$('#academic option:selected').text()+
-			'&major='+$('#major option:selected').text()+'&oldCompany='+$('#oldCompany').val()+'&newCompany='+$('#newCompany').val();
+
+	//点击提交传递参数，跳转页面
+	$('#btn').on('click',function(){
+		validCheck();
+		console.log($('#btn').prop('disabled'));
+		if($('#btn').prop('disabled') === false){
+			url='gaipai_text.html?year='+$('#year').val()+'&name='+$('#name').val()+'&academic='+$('#academic').val()+
+			'&major='+$('#major').val()+'&oldCompany='+$('#oldCompany').val()+'&newCompany='+$('#newCompany').val();
 			document.location.href=url;
 		}	
 	});
-
-	
 });

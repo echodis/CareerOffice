@@ -46,13 +46,12 @@
 <body>
 	<div id="wrapper" >
 		<p>为确保打印成功，请准确输入个人信息！</p>
-	 	<div id="content" ">
+	 	<div id="content" >
 		 	<form class="form-horizontal">
 		 		<div class="form-group ">
-		 	        <label for="" class="col-xs-4 control-label">毕业年度：</label>
-		 	        <!-- 动态添加时间 -->
+		 	        <label for="" class="col-xs-4 control-label">毕业年度：</label>		 	        <!-- 动态添加时间？ -->
 		 	        <div class="col-sm-5">
-		 	            <select name="" id="year" class="form-control"></select>
+			 	        <input type="text" placeholder="请输入毕业年度(如2016)" class="form-control" id="year">
 		 	        </div>
 		 	    </div>
 		 	    
@@ -64,65 +63,42 @@
 			    </div>
 			    
 			    <div class="form-group">
-			    	<!-- 学历还需补充 -->
 			        <label for="" class="col-xs-4 control-label">学历：</label>
 			        <div class="col-sm-5">
 			        	<select name="" id="academic" class="form-control">
 				        <option value="本科">本科</option>
 				        <option value="硕士">硕士</option>
+				        <option value="博士">博士</option>
 			            </select>
 			        </div>
-			    </div>    
-			    
+			    </div>    			    
 			    <div class="form-group">
-			 	<!-- 具体院系还需补充 -->
-			        <label for=""class="col-xs-4 control-label">院系：</label>
-			        <div class="col-sm-5">
-			    	    <select name="" id="department" class="form-control">
-				        <option value="管理与经济学部" selected="selected">管理与经济学部</option>
-				        <option value="人文与社会科学学部">人文与社会科学学部</option>
-				        <option value="数学与科学学院">数学与科学学院</option>
-			            </select>
-			        </div> 
-			    </div> 
-
-			    <div class="form-group">
-			        <!-- 专业根据院系在student_info文档进行补充 -->
 			        <label for="" class="col-xs-4 control-label">专业：</label>
 			        <div class="col-sm-5">
-			            <select name="" id="major" class="form-control" >
-				        <option value="信息管理与信息系统" selected="selected">信息管理与信息系统</option>
-				        <option value="工商管理">工商管理</option>
-				        <option value="物流管理">物流管理</option>
-			            </select>
+			        	<input type="text" placeholder="请输入专业全称" class="form-control" id="major">
 			        </div> 
 			    </div> 
-
-			    <div class="form-group">
+				<div class="form-group">
 			        <label for=""class="col-xs-4 control-label">原派遣公司：</label>
 			        <div class="col-sm-5">
 			            <input type="text" placeholder="请输入原报到证抬头名称" id="oldCompany"class="form-control">
 			        </div> 
 			    </div> 
-
-
                 <div class="form-group">
 			        <label for=""class="col-xs-4 control-label">新派遣公司：</label>
 			        <div class="col-sm-5">    
 			            <input type="text" placeholder="请输入新报到证抬头名称" id="newCompany"class="form-control">
 			         </div> 
 			    </div> 
-                
                 <div class="form-group">
                 	<div class="col-sm-offset-4 col-sm-5">
-			            <input type="submit" value="提交" disabled="true" class="btn btn-success">
+			            <input type="button" value="提交" id="btn" class="btn btn-success btn-block">
 			        </div> 
 			    </div> 
 		</form>
 		</div> 
 	</div>
-	
-	<script src="js/jquery-2.0.2.js"></script>
-	<script src="js/student_info.js"></script>
+	<script src="../js/jquery-2.0.2.js"></script>
+	<script src="../js/student_info.js"></script>
 </body>
 </html>
