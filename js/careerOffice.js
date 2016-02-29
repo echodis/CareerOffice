@@ -18,7 +18,7 @@ $(function(){
 		$(this).parent().parent().removeClass('bg_img');
 		//记录当前题号以提供对应视频
 		console.log($(this).parent().parent().attr('id'));
-		itemNumber = $(this).parent().parent().attr('id').slice(4);
+		itemNumber = $(this).parent().parent().attr('id');//修改为获取全部长度id
 		console.log(itemNumber);
 		tip_no();
 		//alert(itemNumber);						

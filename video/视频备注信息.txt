@@ -1,1 +1,7 @@
-qy_p1:企业发offer
+qyop1:企业发offer
+qyop2:学生接offer
+qyop3:打印三方
+
+qynp2:打印（空白）三方
+
+wy_p3:违约申请
